@@ -34,10 +34,10 @@
             this.btnCheckAnswer = new System.Windows.Forms.Button();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rdoAnswer1 = new System.Windows.Forms.RadioButton();
-            this.rdoAnswer2 = new System.Windows.Forms.RadioButton();
-            this.rdoAnswer3 = new System.Windows.Forms.RadioButton();
             this.rdoAnswer4 = new System.Windows.Forms.RadioButton();
+            this.rdoAnswer3 = new System.Windows.Forms.RadioButton();
+            this.rdoAnswer2 = new System.Windows.Forms.RadioButton();
+            this.rdoAnswer1 = new System.Windows.Forms.RadioButton();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblDifficulty = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -61,6 +61,7 @@
             this.btnNewGame.TabIndex = 1;
             this.btnNewGame.Text = "New Game";
             this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // btnRestart
             // 
@@ -70,6 +71,7 @@
             this.btnRestart.TabIndex = 2;
             this.btnRestart.Text = "Restart Game";
             this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // btnCheckAnswer
             // 
@@ -100,25 +102,15 @@
             this.panel1.Size = new System.Drawing.Size(766, 305);
             this.panel1.TabIndex = 5;
             // 
-            // rdoAnswer1
+            // rdoAnswer4
             // 
-            this.rdoAnswer1.AutoSize = true;
-            this.rdoAnswer1.Location = new System.Drawing.Point(51, 39);
-            this.rdoAnswer1.Name = "rdoAnswer1";
-            this.rdoAnswer1.Size = new System.Drawing.Size(27, 26);
-            this.rdoAnswer1.TabIndex = 0;
-            this.rdoAnswer1.TabStop = true;
-            this.rdoAnswer1.UseVisualStyleBackColor = true;
-            // 
-            // rdoAnswer2
-            // 
-            this.rdoAnswer2.AutoSize = true;
-            this.rdoAnswer2.Location = new System.Drawing.Point(51, 105);
-            this.rdoAnswer2.Name = "rdoAnswer2";
-            this.rdoAnswer2.Size = new System.Drawing.Size(27, 26);
-            this.rdoAnswer2.TabIndex = 1;
-            this.rdoAnswer2.TabStop = true;
-            this.rdoAnswer2.UseVisualStyleBackColor = true;
+            this.rdoAnswer4.AutoSize = true;
+            this.rdoAnswer4.Location = new System.Drawing.Point(51, 236);
+            this.rdoAnswer4.Name = "rdoAnswer4";
+            this.rdoAnswer4.Size = new System.Drawing.Size(27, 26);
+            this.rdoAnswer4.TabIndex = 3;
+            this.rdoAnswer4.TabStop = true;
+            this.rdoAnswer4.UseVisualStyleBackColor = true;
             // 
             // rdoAnswer3
             // 
@@ -130,15 +122,25 @@
             this.rdoAnswer3.TabStop = true;
             this.rdoAnswer3.UseVisualStyleBackColor = true;
             // 
-            // rdoAnswer4
+            // rdoAnswer2
             // 
-            this.rdoAnswer4.AutoSize = true;
-            this.rdoAnswer4.Location = new System.Drawing.Point(51, 236);
-            this.rdoAnswer4.Name = "rdoAnswer4";
-            this.rdoAnswer4.Size = new System.Drawing.Size(27, 26);
-            this.rdoAnswer4.TabIndex = 3;
-            this.rdoAnswer4.TabStop = true;
-            this.rdoAnswer4.UseVisualStyleBackColor = true;
+            this.rdoAnswer2.AutoSize = true;
+            this.rdoAnswer2.Location = new System.Drawing.Point(51, 105);
+            this.rdoAnswer2.Name = "rdoAnswer2";
+            this.rdoAnswer2.Size = new System.Drawing.Size(27, 26);
+            this.rdoAnswer2.TabIndex = 1;
+            this.rdoAnswer2.TabStop = true;
+            this.rdoAnswer2.UseVisualStyleBackColor = true;
+            // 
+            // rdoAnswer1
+            // 
+            this.rdoAnswer1.AutoSize = true;
+            this.rdoAnswer1.Location = new System.Drawing.Point(51, 39);
+            this.rdoAnswer1.Name = "rdoAnswer1";
+            this.rdoAnswer1.Size = new System.Drawing.Size(27, 26);
+            this.rdoAnswer1.TabIndex = 0;
+            this.rdoAnswer1.TabStop = true;
+            this.rdoAnswer1.UseVisualStyleBackColor = true;
             // 
             // lblCategory
             // 

@@ -13,7 +13,7 @@ namespace TriviaApp
     public partial class SetupForm : Form
     {
         private Dictionary<string, int> Categories = new Dictionary<string, int>();
-        private MainForm mainForm;
+        private MainForm MainWindow;
 
         public SetupForm()
         {
@@ -22,8 +22,7 @@ namespace TriviaApp
 
         private void SetupForm_Load(object sender, EventArgs e)
         {
-            mainForm = (MainForm) Tag;
-            numQuestions.Value = mainForm.NumQuestions;
+            MainWindow = (MainForm) Tag;
 
             // add category names and corresponding codes to Categories dict
             Categories.Add("All Categories", -1);
@@ -53,17 +52,32 @@ namespace TriviaApp
             Categories.Add("Cartoons & Animations", 32);
 
             cboCategory.Items.AddRange(Categories.Keys.ToArray()); // add all categories to category combobox
-            cboCategory.SelectedItem = mainForm.Category.Key;
 
+            // add difficulty level options to combobox
             cboDifficulty.Items.Add("Easy");
             cboDifficulty.Items.Add("Medium");
             cboDifficulty.Items.Add("Hard");
-            cboDifficulty.SelectedItem = mainForm.Difficulty;
+
+            // set everything to the values that the main form has
+            numQuestions.Value = MainWindow.NumQuestions;
+            cboCategory.SelectedItem = MainWindow.Category.Key;
+            cboDifficulty.SelectedItem = MainWindow.Difficulty;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string category = cboCategory.SelectedItem.ToString();
+
+            // save the selections made to their corresponding attributes in the main form
+            MainWindow.NumQuestions = (int) numQuestions.Value;
+            MainWindow.Category = new KeyValuePair<string, int>(category, Categories[category]);
+            MainWindow.Difficulty = cboDifficulty.SelectedItem.ToString();
+            Dispose();
         }
     }
 }

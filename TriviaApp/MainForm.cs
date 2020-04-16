@@ -37,5 +37,26 @@ namespace TriviaApp
             setup.Show();
         }
 
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+
+
+            StartGame();
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+
+
+            StartGame();
+        }
+
+        private void StartGame()
+        {
+            lblCategory.Text = Category.Key;
+            lblDifficulty.Text = Difficulty;
+        }
+
+        
     }
 }

@@ -8,10 +8,10 @@ namespace TriviaApp
 {
     class OpenTriviaAPI
     {
-        private readonly string apiURL = "https://opentdb.com/api.php?type=multiple";
-        private readonly string specifyAmount = "&amount=";
-        private readonly string specifyCategory = "&category=";
-        private readonly string specifyDifficulty = "&difficulty=";
+        private readonly string ApiURL = "https://opentdb.com/api.php?type=multiple";
+        private readonly string SpecifyAmount = "&amount=";
+        private readonly string SpecifyCategory = "&category=";
+        private readonly string SpecifyDifficulty = "&difficulty=";
 
         public List<Question> GetQuestions(int amount, string category, string difficulty)
         {
