@@ -25,29 +25,30 @@ namespace TriviaApp
             MainWindow = (MainForm) Tag;
 
             // add category names and corresponding codes to Categories dict
+            // some of these never seem to return any actual results, so they're commented out
             Categories.Add("All Categories", -1);
             Categories.Add("General Knowledge", 9); // starts @ 9 for some reason???
             Categories.Add("Books", 10);
             Categories.Add("Film", 11);
             Categories.Add("Music", 12);
-            Categories.Add("Musicals & Theatre", 13);
+//            Categories.Add("Musicals & Theatre", 13); // doesn't work
             Categories.Add("Television", 14);
             Categories.Add("Video Games", 15);
             Categories.Add("Board Games", 16);
             Categories.Add("Science & Nature", 17);
             Categories.Add("Computers", 18);
-            Categories.Add("Mathematics", 19);
+//            Categories.Add("Mathematics", 19); // doesn't work
             Categories.Add("Mythology", 20);
             Categories.Add("Sports", 21);
             Categories.Add("Geography", 22);
             Categories.Add("History", 23);
             Categories.Add("Politics", 24);
-            Categories.Add("Art", 25);
-            Categories.Add("Celebrities", 26);
+//            Categories.Add("Art", 25); // doesn't work
+//            Categories.Add("Celebrities", 26); // doesn't work
             Categories.Add("Animals", 27);
             Categories.Add("Vehicles", 28);
             Categories.Add("Comics", 29);
-            Categories.Add("Gadgets", 30);
+//            Categories.Add("Gadgets", 30); // doesn't work
             Categories.Add("Japanese Anime & Manga", 31);
             Categories.Add("Cartoons & Animations", 32);
 

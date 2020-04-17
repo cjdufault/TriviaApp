@@ -163,7 +163,7 @@ namespace TriviaApp
 
             MessageBox.Show("Game Details:\n\n" +
                 $"Category: {lblCategory.Text}\nDifficulty: {lblDifficulty.Text}\n\n" +
-                $"Final Result:\n\n{Score} right out of {Questions.Count} questions!", "Game Over!");
+                $"Final Result:\n\nYou got {Score} right out of {Questions.Count} questions!", "Game Over!");
         }
     }
 }

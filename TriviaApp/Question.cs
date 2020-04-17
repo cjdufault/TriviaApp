@@ -12,14 +12,17 @@ namespace TriviaApp
     class Question
     {
         public Question(string questionText, string correctAnswer, List<string> incorrectAnswers){
-            QuestionText = questionText;
-            CorrectAnswer = correctAnswer;
-            IncorrectAnswers = incorrectAnswers;
+            QuestionText = ReplaceWeirdCharacters(questionText);
+            CorrectAnswer = ReplaceWeirdCharacters(correctAnswer);
+            foreach (string answer in incorrectAnswers)
+            {
+                IncorrectAnswers.Add(ReplaceWeirdCharacters(answer));
+            }
         }
 
         public string QuestionText { get; set; }
         public string CorrectAnswer { get; set; }
-        public List<string> IncorrectAnswers { get; set; }
+        public List<string> IncorrectAnswers { get; set; } = new List<string>();
 
         public List<string> AllAnswers
         {
@@ -53,6 +56,16 @@ namespace TriviaApp
         public bool IsCorrect(string chosenAnswer)
         {
             return chosenAnswer.Equals(CorrectAnswer);
+        }
+
+        private string ReplaceWeirdCharacters(string input)
+        {
+            Console.WriteLine(input);
+            string output = input.Replace("quot;", "\"");
+            Console.WriteLine(output);
+            output = output.Replace("#039;", "'");
+            Console.WriteLine(output);
+            return output;
         }
     }
 }
