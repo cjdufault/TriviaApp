@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 // This is almost entirely copied from the QuizApp from Lab 9
@@ -10,15 +11,15 @@ namespace TriviaApp
 {
     class Question
     {
-        public Question(string questionText, string correctAnswer, List<string> wrongAnswers){
+        public Question(string questionText, string correctAnswer, List<string> incorrectAnswers){
             QuestionText = questionText;
             CorrectAnswer = correctAnswer;
-            WrongAnswers = wrongAnswers;
+            IncorrectAnswers = incorrectAnswers;
         }
 
         public string QuestionText { get; set; }
         public string CorrectAnswer { get; set; }
-        public List<string> WrongAnswers { get; set; }
+        public List<string> IncorrectAnswers { get; set; }
 
         public List<string> AllAnswers
         {
@@ -28,7 +29,7 @@ namespace TriviaApp
 
                 // add correct and wrong answers to list of all answers
                 allAnswers.Add(CorrectAnswer);
-                allAnswers.AddRange(WrongAnswers);
+                allAnswers.AddRange(IncorrectAnswers);
 
                 Random random = new Random();
                 List<string> shuffledAnswers = new List<string>();

@@ -30,7 +30,6 @@
         {
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
-            this.btnRestart = new System.Windows.Forms.Button();
             this.btnCheckAnswer = new System.Windows.Forms.Button();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,6 +39,7 @@
             this.rdoAnswer1 = new System.Windows.Forms.RadioButton();
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblDifficulty = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,16 +63,6 @@
             this.btnNewGame.UseVisualStyleBackColor = true;
             this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
-            // btnRestart
-            // 
-            this.btnRestart.Location = new System.Drawing.Point(1057, 72);
-            this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(165, 45);
-            this.btnRestart.TabIndex = 2;
-            this.btnRestart.Text = "Restart Game";
-            this.btnRestart.UseVisualStyleBackColor = true;
-            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
-            // 
             // btnCheckAnswer
             // 
             this.btnCheckAnswer.Location = new System.Drawing.Point(1044, 720);
@@ -81,6 +71,7 @@
             this.btnCheckAnswer.TabIndex = 3;
             this.btnCheckAnswer.Text = "Check Answer";
             this.btnCheckAnswer.UseVisualStyleBackColor = true;
+            this.btnCheckAnswer.Click += new System.EventHandler(this.btnCheckAnswer_Click);
             // 
             // lblQuestion
             // 
@@ -160,18 +151,28 @@
             this.lblDifficulty.TabIndex = 7;
             this.lblDifficulty.Text = "Medium Difficulty";
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(526, 721);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(136, 37);
+            this.lblScore.TabIndex = 8;
+            this.lblScore.Text = "Score: 0";
+            // 
             // MainForm
             // 
             this.AcceptButton = this.btnCheckAnswer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 796);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblDifficulty);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.btnCheckAnswer);
-            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnSettings);
             this.Name = "MainForm";
@@ -188,7 +189,6 @@
 
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnNewGame;
-        private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnCheckAnswer;
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.Panel panel1;
@@ -198,6 +198,7 @@
         private System.Windows.Forms.RadioButton rdoAnswer1;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblDifficulty;
+        private System.Windows.Forms.Label lblScore;
     }
 }
 
