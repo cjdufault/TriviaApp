@@ -84,6 +84,8 @@ namespace TriviaApp
 
         private void StartGame()
         {
+            lblScore.Text = "Score: 0";
+
             // enable the elements GameOver() disables
             foreach(RadioButton rb in RadioButtons)
             {

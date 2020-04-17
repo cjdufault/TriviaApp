@@ -70,6 +70,11 @@
             // numQuestions
             // 
             this.numQuestions.Location = new System.Drawing.Point(446, 115);
+            this.numQuestions.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.numQuestions.Name = "numQuestions";
             this.numQuestions.Size = new System.Drawing.Size(120, 31);
             this.numQuestions.TabIndex = 3;
